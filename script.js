@@ -293,6 +293,14 @@ document.addEventListener('DOMContentLoaded', () => {
             correct: "Cherry Blossom"
         }
     ];
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+            shuffleArray(quizData);
+        quizData.forEach(question => shuffleArray(question.answers));
 
     let score = 0;
     let currentQuestion = 0;
@@ -342,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     showResults();
                 }
-            }, 1000);
+            }, 500);
         }
     }
 
