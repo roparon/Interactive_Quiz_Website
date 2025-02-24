@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Quiz</h1>
+        <nav>
+            <button id="startQuizBtn">Start Quiz</button>
+        </nav>
+    </header>
+
+    <main id="quizContainer" class="hidden">
+        <div id="quizProgress">
+            <span>Question <span id="currentQuestionIndex">1</span> of 500</span>
+            <progress value="0" max="5" id="progressBar"></progress>
+        </div>
+
+        <div id="questionContainer">
+            <h2 id="questionText">What is the capital of France?</h2>
+            <div class="answers">
+                <button class="answerBtn">Paris</button>
+                <button class="answerBtn">London</button>
+                <button class="answerBtn">Rome</button>
+                <button class="answerBtn">Berlin</button>
+            </div>
+        </div>
+
+        <div id="wrongAnswerMessage" class="wrongAnswerMessage"></div>
+
+        <button id="submitBtn" class="hidden">Submit</button>
+    </main>
+
+    <div id="resultContainer" class="hidden">
+        <h2>Quiz Complete!</h2>
+        <p>Your Score: <span id="finalScore">0</span></p>
+        <p id="resultMessage">Great Job!</p>
+        <button id="restartQuizBtn">Restart Quiz</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Interactive Quiz. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
